@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Login Screen" customClass="ViewController" customModule="HW_2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ota-lp-avO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-kr-GSv">
+                                <rect key="frame" x="16" y="140.5" width="288" height="199"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-JP-8e8" userLabel="Text Fields">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="84"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Rh-Zf-5bY" userLabel="Login TF">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="NrL-Wh-TaY"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-Pt-Sfj" userLabel="Password TF">
+                                                <rect key="frame" x="0.0" y="50" width="288" height="34"/>
+                                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-AP-KmK" userLabel="Login Button">
+                                        <rect key="frame" x="0.0" y="109" width="288" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.333333333333343" id="TtP-n4-lmI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="large">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.94909626250000001" green="0.78594863410000004" blue="0.63352024559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x3-1T-R7n"/>
+                                            <segue destination="ZkO-6L-pu0" kind="modal" modalPresentationStyle="fullScreen" id="DnN-Nk-td0"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-c8-t6s" userLabel="Forgot Buttons">
+                                        <rect key="frame" x="0.0" y="168" width="288" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANK-FK-CdX" userLabel="Forgot Login Batton">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Login?">
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ua-wp-ROx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cL-OU-TLd" userLabel="Forgot Password Button">
+                                                <rect key="frame" x="162" y="0.0" width="126" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?" titleAlignment="center">
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6go-oR-03s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199.33000000000001" id="y7c-tu-XET"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi👋 Enter your login and password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgC-x1-5ji">
+                                <rect key="frame" x="32" y="29" width="257" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="40s-GR-tDp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hib-J7-EU4"/>
+                        <color key="backgroundColor" red="0.75028580430000003" green="0.70277684929999995" blue="0.64394134280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4OT-kr-GSv" firstAttribute="centerY" secondItem="ota-lp-avO" secondAttribute="centerY" id="4g8-Ju-Ld5"/>
+                            <constraint firstItem="4OT-kr-GSv" firstAttribute="leading" secondItem="hib-J7-EU4" secondAttribute="leading" constant="16" id="5td-c2-YXK"/>
+                            <constraint firstItem="4OT-kr-GSv" firstAttribute="centerX" secondItem="ota-lp-avO" secondAttribute="centerX" id="JIH-3Q-ppR"/>
+                            <constraint firstItem="hib-J7-EU4" firstAttribute="trailing" secondItem="4OT-kr-GSv" secondAttribute="trailing" constant="16" id="Zl7-0S-Hyt"/>
+                            <constraint firstItem="hib-J7-EU4" firstAttribute="trailing" secondItem="cgC-x1-5ji" secondAttribute="trailing" constant="31" id="fmN-jn-cKd"/>
+                            <constraint firstItem="cgC-x1-5ji" firstAttribute="top" secondItem="hib-J7-EU4" secondAttribute="top" constant="29" id="qJ5-MH-m9z"/>
+                            <constraint firstItem="cgC-x1-5ji" firstAttribute="leading" secondItem="hib-J7-EU4" secondAttribute="leading" constant="32" id="rsf-IR-vE8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="2Rh-Zf-5bY" id="qTG-Q9-v5e"/>
+                        <outlet property="passwordTextField" destination="MUT-Pt-Sfj" id="Wzk-CV-Yd4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28.125" y="97.5"/>
+        </scene>
+        <!--profile-->
+        <scene sceneID="kFq-cR-pgc">
+            <objects>
+                <viewController id="Gsx-Vy-Ss8" customClass="ProfileViewController" customModule="HW_2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9nf-Ni-sII">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-rc-1gn">
+                                <rect key="frame" x="96" y="34" width="128.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ALQ-u4-uOA">
+                                <rect key="frame" x="39" y="174" width="230" height="132"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="knm-Uf-rMk">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="132"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-72-zMx">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-WG-Wj2">
+                                                <rect key="frame" x="0.0" y="37.5" width="103" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hL-1g-Jc7">
+                                                <rect key="frame" x="0.0" y="75" width="30" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-4q-2DS">
+                                                <rect key="frame" x="0.0" y="112.5" width="55" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Put-yG-O2G">
+                                        <rect key="frame" x="123" y="0.0" width="1" height="132"/>
+                                        <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="h4w-KZ-lfg"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="qGU-dA-ea8">
+                                        <rect key="frame" x="144" y="0.0" width="86" height="132"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-a3-Ga1">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOb-ch-60K">
+                                                <rect key="frame" x="0.0" y="37.5" width="86" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efl-kN-CZv">
+                                                <rect key="frame" x="0.0" y="75" width="86" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Placeholder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62k-vJ-Bv9">
+                                                <rect key="frame" x="0.0" y="112.5" width="86" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-Ty-DK7">
+                                <rect key="frame" x="66.5" y="346" width="187" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="FWZ-lD-JyC"/>
+                                    <constraint firstAttribute="height" constant="53" id="MyK-ES-uDj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log Out" cornerStyle="large">
+                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.94909626250000001" green="0.78594863410000004" blue="0.63352024559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="UZw-EG-Nnc" kind="unwind" unwindAction="unwindSegueWithSegue:" id="GKE-Fk-sen"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNh-ef-UzJ">
+                                <rect key="frame" x="139.5" y="91.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mNI-w0-vGh"/>
+                        <color key="backgroundColor" red="0.75028580430000003" green="0.70277684929999995" blue="0.64394134280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8IQ-rc-1gn" firstAttribute="top" secondItem="mNI-w0-vGh" secondAttribute="top" constant="34" id="6DS-xm-FwC"/>
+                            <constraint firstItem="7rn-Ty-DK7" firstAttribute="centerX" secondItem="9nf-Ni-sII" secondAttribute="centerX" id="GW7-Mu-yIk"/>
+                            <constraint firstItem="ALQ-u4-uOA" firstAttribute="top" secondItem="mNh-ef-UzJ" secondAttribute="bottom" constant="62" id="JkN-oM-gsa"/>
+                            <constraint firstItem="mNh-ef-UzJ" firstAttribute="centerX" secondItem="9nf-Ni-sII" secondAttribute="centerX" id="diK-CH-5pJ"/>
+                            <constraint firstItem="ALQ-u4-uOA" firstAttribute="centerY" secondItem="9nf-Ni-sII" secondAttribute="centerY" id="e49-Jb-vmb"/>
+                            <constraint firstItem="ALQ-u4-uOA" firstAttribute="centerX" secondItem="9nf-Ni-sII" secondAttribute="centerX" constant="-5.8333333333333144" id="fbo-9M-XO5"/>
+                            <constraint firstItem="mNI-w0-vGh" firstAttribute="bottom" secondItem="7rn-Ty-DK7" secondAttribute="bottom" constant="32" id="pvQ-xG-Qg2"/>
+                            <constraint firstItem="8IQ-rc-1gn" firstAttribute="centerX" secondItem="9nf-Ni-sII" secondAttribute="centerX" id="wKp-OS-jxg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="profile" id="mq9-ir-zZf">
+                        <imageReference key="image" image="person.crop.circle.fill" catalog="system"/>
+                        <color key="badgeColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="ageOutlet" destination="efl-kN-CZv" id="t7m-4Q-jcg"/>
+                        <outlet property="degreeOutlet" destination="62k-vJ-Bv9" id="s8P-u0-Ga1"/>
+                        <outlet property="firstNameOutlet" destination="fmh-a3-Ga1" id="5lg-vJ-znE"/>
+                        <outlet property="labelToDisplayLogin" destination="mNh-ef-UzJ" id="UIw-Hd-UiJ"/>
+                        <outlet property="secondNameOutlet" destination="KOb-ch-60K" id="RPG-mC-6kA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoH-0K-F8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UZw-EG-Nnc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1657.0093457943924" y="-645.35637149028082"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wNy-Mf-BzN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZkO-6L-pu0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qa7-vN-dZX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.94909626250000001" green="0.78594863410000004" blue="0.63352024559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gsx-Vy-Ss8" kind="relationship" relationship="viewControllers" id="fh4-Jj-UNj"/>
+                        <segue destination="F3a-Ws-oSh" kind="relationship" relationship="viewControllers" id="OOA-iE-xN7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkF-Nq-6Gj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="97"/>
+        </scene>
+        <!--My Interests-->
+        <scene sceneID="8Li-21-mgV">
+            <objects>
+                <viewController id="Chj-Xh-u2P" userLabel="My Interests" customClass="InterestsViewController" customModule="HW_2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yaE-P6-F6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Interests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-jN-dtJ">
+                                <rect key="frame" x="91" y="78" width="139" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Ds-Wq0">
+                                <rect key="frame" x="15.5" y="122.5" width="289" height="235"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="27G-Ra-vqf">
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="57"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-zX-HRr">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" titlePadding="0.0" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🎸">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Music">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <font key="NSOriginalFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="musicButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="vDa-Ic-1DS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-xc-iUy">
+                                                <rect key="frame" x="110" y="0.0" width="69" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="👨‍💻">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Tech">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="techButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="Mk7-N9-9ES"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hV-9q-9R2">
+                                                <rect key="frame" x="220" y="0.0" width="69" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🎞">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Movies">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="moviesButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="Nro-er-bYW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="9df-1c-O2U">
+                                        <rect key="frame" x="0.0" y="89" width="289" height="57"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XT4-JI-NzZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🎭">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Theatre">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="theatreButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="21j-XM-JvI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-eG-mAu">
+                                                <rect key="frame" x="108.5" y="0.0" width="72" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🚗">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Cars">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="carsButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="D9E-Yf-M0Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRg-Bg-EG0">
+                                                <rect key="frame" x="217.5" y="0.0" width="71.5" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🖌">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Design">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="designButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="m86-A5-Qiv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="5cx-M4-dYi">
+                                        <rect key="frame" x="0.0" y="178" width="289" height="57"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-yv-Xt5">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="💷">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Economy">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="economyButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="68D-IM-gub"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-QY-gYx">
+                                                <rect key="frame" x="100.5" y="0.0" width="88" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" imagePadding="9" cornerStyle="small">
+                                                    <imageReference key="image" image="swift" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                        <hierarchicalColors>
+                                                            <color systemColor="systemOrangeColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                    <attributedString key="attributedTitle"/>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Swift">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="swiftButton:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="Puq-D2-sFZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzs-Ek-UBX">
+                                                <rect key="frame" x="201.5" y="0.0" width="87.5" height="57"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" titlePadding="0.0" cornerStyle="small" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="📚">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <attributedString key="attributedSubtitle">
+                                                        <fragment content="Education">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="SFPro-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="educationButtonPressed:" destination="Chj-Xh-u2P" eventType="touchUpInside" id="0B6-z9-e4A"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H7N-ym-Qpf"/>
+                        <color key="backgroundColor" red="0.75028580430000003" green="0.70277684929999995" blue="0.64394134280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NhG-jN-dtJ" firstAttribute="leading" secondItem="H7N-ym-Qpf" secondAttribute="leading" constant="91" id="MXk-tZ-Lwu"/>
+                            <constraint firstItem="6V8-Ds-Wq0" firstAttribute="centerX" secondItem="yaE-P6-F6I" secondAttribute="centerX" id="SNX-BW-4E0"/>
+                            <constraint firstItem="NhG-jN-dtJ" firstAttribute="top" secondItem="H7N-ym-Qpf" secondAttribute="top" constant="34" id="V0d-jS-Lop"/>
+                            <constraint firstItem="6V8-Ds-Wq0" firstAttribute="centerY" secondItem="yaE-P6-F6I" secondAttribute="centerY" id="dyX-Uk-vNx"/>
+                            <constraint firstItem="H7N-ym-Qpf" firstAttribute="trailing" secondItem="NhG-jN-dtJ" secondAttribute="trailing" constant="90" id="r0s-el-dvJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SFF-hN-cDZ"/>
+                    <connections>
+                        <segue destination="UG5-RR-wa8" kind="show" identifier="detailedInteres" id="Ebn-BZ-k4l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AwT-eC-SNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417" y="96"/>
+        </scene>
+        <!--Interests Article View Controller-->
+        <scene sceneID="jNW-go-f3h">
+            <objects>
+                <viewController id="UG5-RR-wa8" customClass="InterestsArticleViewController" customModule="HW_2_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hvz-VX-3TN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Interests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-hW-IHr">
+                                <rect key="frame" x="91" y="78" width="139" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.1509900391" green="0.030933793630000001" blue="0.0042910031040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-yX-lBj">
+                                <rect key="frame" x="16" y="130" width="288" height="20.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Placeholder">
+                                        <attributes>
+                                            <color key="NSColor" red="0.4501953125" green="0.30207890269999998" blue="0.24577894810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Bm-Cs-R5V">
+                                <rect key="frame" x="81" y="277" width="158" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="bey-qa-DNU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eH2-G6-DId"/>
+                        <color key="backgroundColor" red="0.75028580430000003" green="0.70277684929999995" blue="0.64394134280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vVD-hW-IHr" firstAttribute="top" secondItem="eH2-G6-DId" secondAttribute="top" constant="34" id="2K6-ge-nph"/>
+                            <constraint firstItem="0Bm-Cs-R5V" firstAttribute="centerX" secondItem="Hvz-VX-3TN" secondAttribute="centerX" id="IEm-GK-78H"/>
+                            <constraint firstItem="rdU-yX-lBj" firstAttribute="top" secondItem="vVD-hW-IHr" secondAttribute="bottom" constant="23" id="NHm-cb-1Zs"/>
+                            <constraint firstItem="eH2-G6-DId" firstAttribute="bottom" secondItem="0Bm-Cs-R5V" secondAttribute="bottom" constant="43" id="Og9-PO-rCb"/>
+                            <constraint firstItem="rdU-yX-lBj" firstAttribute="leading" secondItem="eH2-G6-DId" secondAttribute="leading" constant="16" id="crR-AD-Pbe"/>
+                            <constraint firstItem="eH2-G6-DId" firstAttribute="trailing" secondItem="vVD-hW-IHr" secondAttribute="trailing" constant="90" id="ijY-Di-Mwe"/>
+                            <constraint firstItem="0Bm-Cs-R5V" firstAttribute="leading" secondItem="eH2-G6-DId" secondAttribute="leading" constant="81" id="oBd-vV-sB9"/>
+                            <constraint firstItem="eH2-G6-DId" firstAttribute="trailing" secondItem="rdU-yX-lBj" secondAttribute="trailing" constant="16" id="vDJ-hg-xYG"/>
+                            <constraint firstItem="vVD-hW-IHr" firstAttribute="leading" secondItem="eH2-G6-DId" secondAttribute="leading" constant="91" id="xdr-FW-Piy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mvC-rr-me6"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="rdU-yX-lBj" id="1Q7-Ig-rrp"/>
+                        <outlet property="headLabel" destination="vVD-hW-IHr" id="476-Hz-avx"/>
+                        <outlet property="imageView" destination="0Bm-Cs-R5V" id="CRO-bv-Ptj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSP-0U-ioG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161.25" y="97.5"/>
+        </scene>
+        <!--My Interests-->
+        <scene sceneID="aip-VS-e0m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F3a-Ws-oSh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Interests" image="guitars.fill" catalog="system" id="Las-eo-D88"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MrD-LZ-GXh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Chj-Xh-u2P" kind="relationship" relationship="rootViewController" id="R30-aT-8Zt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmw-gQ-I0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.5" y="97.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="guitars.fill" catalog="system" width="128" height="100"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="swift" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
